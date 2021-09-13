@@ -74,7 +74,7 @@ public class menuUsuario extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(255, 51, 51));
         jButton1.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 204));
-        jButton1.setText("CERRAR");
+        jButton1.setText("Cerrar Sesión");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -123,11 +123,11 @@ public class menuUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCrudUsuariosMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrudUsuariosMouseEntered
-       // btnCrudUsuarios.setBackground(Color.GREEN);
+        // btnCrudUsuarios.setBackground(Color.GREEN);
     }//GEN-LAST:event_btnCrudUsuariosMouseEntered
 
     private void btnCrudUsuariosMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_btnCrudUsuariosMouseExited
-       // btnCrudUsuarios.setBackground(UIManager.getColor("control"));
+        // btnCrudUsuarios.setBackground(UIManager.getColor("control"));
 
     }//GEN-LAST:event_btnCrudUsuariosMouseExited
 
@@ -146,7 +146,10 @@ public class menuUsuario extends javax.swing.JFrame {
     }//GEN-LAST:event_btnCrudEmpresaActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        System.exit(0);
+        vistaPrincipal l = new vistaPrincipal();
+        l.setVisible(true);
+        l.setLocationRelativeTo(null);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
