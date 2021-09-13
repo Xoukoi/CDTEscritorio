@@ -191,7 +191,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/config/edit.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="EDITAR"/>
+        <Property name="text" type="java.lang.String" value="SELECCIONAR"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -495,7 +495,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/config/delete.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="DELETE"/>
+                <Property name="text" type="java.lang.String" value="ELIMINAR"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -506,7 +506,7 @@
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/config/update.png"/>
                 </Property>
-                <Property name="text" type="java.lang.String" value="UPDATE"/>
+                <Property name="text" type="java.lang.String" value="MODIFICAR"/>
               </Properties>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
@@ -521,7 +521,7 @@
         <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
           <Image iconType="3" name="/config/nuevo.png"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="NUEVO"/>
+        <Property name="text" type="java.lang.String" value="LIMPIAR CAMPOS"/>
       </Properties>
       <AuxValues>
         <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>

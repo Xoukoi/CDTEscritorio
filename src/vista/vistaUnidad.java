@@ -70,7 +70,7 @@ public class vistaUnidad extends javax.swing.JFrame {
 
             },
             new String [] {
-                "RUT EMPRESA", "NOMBRE", "DIRECCION", "TELEFONO", "CORREO", "RUBRO", "ESTADO", "EMPRESA"
+                "ID UNIDAD", "NOMBRE", "ENCARGADO", "DEPARTAMENTO", "SUBDEPARTAMENTO", "SECCIÓN", "ESTADO", "EMPRESA"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -105,7 +105,7 @@ public class vistaUnidad extends javax.swing.JFrame {
         );
 
         btnEditar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/config/edit.png"))); // NOI18N
-        btnEditar.setText("EDITAR");
+        btnEditar.setText("SELECCIONAR");
 
         jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder("Datos"));
 
@@ -209,10 +209,10 @@ public class vistaUnidad extends javax.swing.JFrame {
         btnListar.setText("LISTAR");
 
         btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/config/delete.png"))); // NOI18N
-        btnDelete.setText("DELETE");
+        btnDelete.setText("ELIMINAR");
 
         btnActualizar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/config/update.png"))); // NOI18N
-        btnActualizar.setText("UPDATE");
+        btnActualizar.setText("MODIFICAR");
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
@@ -265,7 +265,7 @@ public class vistaUnidad extends javax.swing.JFrame {
         );
 
         btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/config/nuevo.png"))); // NOI18N
-        btnNuevo.setText("NUEVO");
+        btnNuevo.setText("LIMPIAR CAMPOS");
 
         btnInactivos.setIcon(new javax.swing.ImageIcon(getClass().getResource("/config/inactivo.png"))); // NOI18N
         btnInactivos.setText("EMPRESAS INACTIVAS");
