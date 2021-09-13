@@ -20,6 +20,7 @@ public class menuEmpresa extends javax.swing.JFrame {
      */
     public menuEmpresa() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**

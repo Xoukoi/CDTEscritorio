@@ -21,6 +21,7 @@ public class menuUsuario extends javax.swing.JFrame {
      */
     public menuUsuario() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
