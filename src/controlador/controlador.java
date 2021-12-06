@@ -15,7 +15,7 @@ import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import modelo.Usuario;
-import vista.Login;
+import vista.LoginD;
 import vista.menuUsuario;
 import vista.vistaUsuario;
 
@@ -28,7 +28,7 @@ public class controlador implements ActionListener {
     UsuarioDAO dao = new UsuarioDAO();
     Usuario u = new Usuario();
     vistaUsuario vista = new vistaUsuario();
-    Login login = new Login();
+    LoginD login = new LoginD();
     DefaultTableModel modelo = new DefaultTableModel();
 
     public controlador() {
@@ -100,7 +100,7 @@ public class controlador implements ActionListener {
         }
     }
 
-    public controlador(Login l) {
+    public controlador(LoginD l) {
         this.login = l;
         this.login.btnEntrar.addActionListener(this);
     }
@@ -141,7 +141,7 @@ public class controlador implements ActionListener {
         if (u == null) {
             JOptionPane.showMessageDialog(vista, "Usuario o Contraseña incorrecta");
             login.dispose();
-            Login.main(null);
+            LoginD.main(null);
         } else {
             login.dispose();
             menuUsuario.main(null);

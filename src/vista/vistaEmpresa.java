@@ -18,6 +18,8 @@ public class vistaEmpresa extends javax.swing.JFrame {
      */
     public vistaEmpresa() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**

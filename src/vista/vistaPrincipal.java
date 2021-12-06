@@ -20,7 +20,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
     public vistaPrincipal() {
         initComponents();
         this.setLocationRelativeTo(null);
-
+        this.setResizable(false);
     }
 
     /**
@@ -33,10 +33,10 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuItem2 = new javax.swing.JMenuItem();
-        jPanel1 = new javax.swing.JPanel();
-        btnUsuario = new javax.swing.JButton();
-        btnEmpresa = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        btnEmpresa = new javax.swing.JButton();
+        btnUsuario = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         jMenuItem2.setText("jMenuItem2");
 
@@ -44,21 +44,16 @@ public class vistaPrincipal extends javax.swing.JFrame {
         setTitle("MENU PRINCIPAL");
         setBackground(new java.awt.Color(102, 102, 255));
         setMaximumSize(new java.awt.Dimension(384, 212));
-        setSize(new java.awt.Dimension(400, 400));
+        setPreferredSize(new java.awt.Dimension(575, 300));
+        setSize(new java.awt.Dimension(395, 395));
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 255));
+        jLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
+        jLabel1.setText("TIPO DE USUARIO");
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(163, 49, -1, -1));
 
-        btnUsuario.setBackground(new java.awt.Color(102, 255, 102));
-        btnUsuario.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
-        btnUsuario.setForeground(new java.awt.Color(51, 51, 51));
-        btnUsuario.setText("EJECUTIVO");
-        btnUsuario.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnUsuarioActionPerformed(evt);
-            }
-        });
-
-        btnEmpresa.setBackground(new java.awt.Color(102, 255, 102));
+        btnEmpresa.setBackground(java.awt.Color.cyan);
         btnEmpresa.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         btnEmpresa.setForeground(new java.awt.Color(51, 51, 51));
         btnEmpresa.setText("CLIENTE");
@@ -67,58 +62,28 @@ public class vistaPrincipal extends javax.swing.JFrame {
                 btnEmpresaActionPerformed(evt);
             }
         });
+        getContentPane().add(btnEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 140, 184, 76));
 
-        jLabel1.setFont(new java.awt.Font("Verdana", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(51, 51, 51));
-        jLabel1.setText("TIPO DE USUARIO");
+        btnUsuario.setBackground(java.awt.Color.cyan);
+        btnUsuario.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        btnUsuario.setForeground(new java.awt.Color(51, 51, 51));
+        btnUsuario.setText("EJECUTIVO");
+        btnUsuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUsuarioActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, 184, 76));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(65, 65, 65)
-                .addComponent(btnUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 93, Short.MAX_VALUE)
-                .addComponent(btnEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(56, 56, 56))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(165, 165, 165)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(69, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.jpeg"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 1, 610, 280));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEmpresaActionPerformed
-        loginEmpresa l = new loginEmpresa();
+        loginEmpresaD l = new loginEmpresaD();
         controladorEmpresa ce = new controladorEmpresa(l);
         l.setVisible(true);
         l.setLocationRelativeTo(null);
@@ -126,7 +91,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEmpresaActionPerformed
 
     private void btnUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuarioActionPerformed
-        Login l = new Login();
+        LoginD l = new LoginD();
         controlador c = new controlador(l);
         l.setVisible(true);
         l.setLocationRelativeTo(null);
@@ -180,7 +145,7 @@ public class vistaPrincipal extends javax.swing.JFrame {
     private javax.swing.JButton btnEmpresa;
     private javax.swing.JButton btnUsuario;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

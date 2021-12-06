@@ -18,6 +18,8 @@ public class vistaEmpleado extends javax.swing.JFrame {
      */
     public vistaEmpleado() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**

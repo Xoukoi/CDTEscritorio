@@ -22,6 +22,7 @@ public class menuUsuario extends javax.swing.JFrame {
     public menuUsuario() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**
@@ -33,16 +34,39 @@ public class menuUsuario extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        btnReporte = new javax.swing.JButton();
         btnCrudUsuarios = new javax.swing.JButton();
         btnCrudEmpresa = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(102, 102, 255));
+        jButton1.setBackground(new java.awt.Color(255, 51, 51));
+        jButton1.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 204));
+        jButton1.setText("Cerrar Sesión");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 220, -1, -1));
 
-        btnCrudUsuarios.setBackground(new java.awt.Color(102, 255, 102));
+        btnReporte.setBackground(java.awt.Color.cyan);
+        btnReporte.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
+        btnReporte.setForeground(new java.awt.Color(51, 51, 51));
+        btnReporte.setText("Reporte de clientes");
+        btnReporte.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnReporte.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnReporteActionPerformed(evt);
+            }
+        });
+        getContentPane().add(btnReporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 60, -1, -1));
+
+        btnCrudUsuarios.setBackground(java.awt.Color.cyan);
         btnCrudUsuarios.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         btnCrudUsuarios.setForeground(new java.awt.Color(51, 51, 51));
         btnCrudUsuarios.setText("Usuarios");
@@ -60,8 +84,9 @@ public class menuUsuario extends javax.swing.JFrame {
                 btnCrudUsuariosActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCrudUsuarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 120, -1, -1));
 
-        btnCrudEmpresa.setBackground(new java.awt.Color(102, 255, 102));
+        btnCrudEmpresa.setBackground(java.awt.Color.cyan);
         btnCrudEmpresa.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
         btnCrudEmpresa.setForeground(new java.awt.Color(51, 51, 51));
         btnCrudEmpresa.setText("Clientes");
@@ -71,54 +96,10 @@ public class menuUsuario extends javax.swing.JFrame {
                 btnCrudEmpresaActionPerformed(evt);
             }
         });
+        getContentPane().add(btnCrudEmpresa, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 170, -1, -1));
 
-        jButton1.setBackground(new java.awt.Color(255, 51, 51));
-        jButton1.setFont(new java.awt.Font("Verdana", 1, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 204));
-        jButton1.setText("Cerrar Sesión");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(62, 62, 62)
-                .addComponent(btnCrudUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 115, Short.MAX_VALUE)
-                .addComponent(btnCrudEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(79, 79, 79))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(218, 218, 218)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 184, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(81, 81, 81)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCrudUsuarios, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnCrudEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(59, 59, 59)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 76, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(75, Short.MAX_VALUE))
-        );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
-        getContentPane().setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/fondo.jpeg"))); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 630, 370));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -139,12 +120,11 @@ public class menuUsuario extends javax.swing.JFrame {
         vu.setLocationRelativeTo(null);
     }//GEN-LAST:event_btnCrudUsuariosActionPerformed
 
-    private void btnCrudEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrudEmpresaActionPerformed
-        vistaEmpresa ve = new vistaEmpresa();
-        controladorEmpresa cem = new controladorEmpresa(ve);
-        ve.setVisible(true);
-        ve.setLocationRelativeTo(null);
-    }//GEN-LAST:event_btnCrudEmpresaActionPerformed
+    private void btnReporteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnReporteActionPerformed
+        Reporte r = new Reporte();
+        r.setVisible(true);
+        r.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnReporteActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         vistaPrincipal l = new vistaPrincipal();
@@ -152,6 +132,13 @@ public class menuUsuario extends javax.swing.JFrame {
         l.setLocationRelativeTo(null);
         this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void btnCrudEmpresaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrudEmpresaActionPerformed
+         vistaEmpresa ve = new vistaEmpresa();
+        controladorEmpresa cem = new controladorEmpresa(ve);
+        ve.setVisible(true);
+        ve.setLocationRelativeTo(null);
+    }//GEN-LAST:event_btnCrudEmpresaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -191,7 +178,8 @@ public class menuUsuario extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JButton btnCrudEmpresa;
     public javax.swing.JButton btnCrudUsuarios;
+    public javax.swing.JButton btnReporte;
     private javax.swing.JButton jButton1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

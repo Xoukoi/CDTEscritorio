@@ -79,7 +79,7 @@ public class controladorUnidad implements ActionListener {
                 vu.txtSubDepartamento.setText(subdepa);
                 vu.txtSeccion.setText(seccion);
                 vu.txtEstado.setText(estado);
-                vu.txtEmpresa.setText(empresa);
+                vu.jcboxEmpresas.setSelectedItem(empresa);
             }
         }
     }
@@ -120,7 +120,7 @@ public class controladorUnidad implements ActionListener {
             String subdepa = vu.txtSubDepartamento.getText();
             String seccion = vu.txtSeccion.getText();
             String estado = vu.txtEstado.getText();
-            String empresa = vu.txtEmpresa.getText();
+            String empresa = vu.jcboxEmpresas.getSelectedItem().toString();
 
             unidad.setIdUnidad(idUnidad);
             unidad.setNombre(nombre);
@@ -142,16 +142,14 @@ public class controladorUnidad implements ActionListener {
 
     public void add() {
 
-        // int idUnidad = Integer.parseInt(vu.txtIdUnidad.getText());
         String nombre = vu.txtNombre.getText();
         String encargado = vu.txtEncargado.getText();
         String departamento = vu.txtDepartamento.getText();
         String subdepa = vu.txtSubDepartamento.getText();
         String seccion = vu.txtSeccion.getText();
         String estado = vu.txtEstado.getText();
-        String empresa = vu.txtEmpresa.getText();
+        String empresa = vu.jcboxEmpresas.getSelectedItem().toString();
 
-        //unidad.setIdUnidad(idUnidad);
         unidad.setNombre(nombre);
         unidad.setEncargado(encargado);
         unidad.setDepartamento(departamento);
@@ -221,7 +219,7 @@ public class controladorUnidad implements ActionListener {
         vu.txtSubDepartamento.setText("");
         vu.txtSeccion.setText("");
         vu.txtEstado.setText("");
-        vu.txtEmpresa.setText("");
+        vu.jcboxEmpresas.setSelectedIndex(0);
         vu.txtNombre.requestFocus();
     }
 

@@ -15,7 +15,7 @@ import javax.swing.SwingConstants;
 import javax.swing.table.DefaultTableCellRenderer;
 import javax.swing.table.DefaultTableModel;
 import modelo.Empresa;
-import vista.loginEmpresa;
+import vista.loginEmpresaD;
 import vista.menuEmpresa;
 import vista.vistaEmpresa;
 
@@ -25,7 +25,7 @@ import vista.vistaEmpresa;
  */
 public class controladorEmpresa implements ActionListener {
 
-    loginEmpresa loem = new loginEmpresa();
+    loginEmpresaD loem = new loginEmpresaD();
     Empresa em = new Empresa();
     EmpresaDAO edao = new EmpresaDAO();
     vistaEmpresa ve = new vistaEmpresa();
@@ -94,7 +94,7 @@ public class controladorEmpresa implements ActionListener {
         }
     }
 
-    public controladorEmpresa(loginEmpresa le) {
+    public controladorEmpresa(loginEmpresaD le) {
         this.loem = le;
         this.loem.btnEntrar.addActionListener(this);
     }

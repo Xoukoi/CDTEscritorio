@@ -5,7 +5,10 @@
  */
 package vista;
 
+import controlador.controladorEmpresa;
 import controlador.controladorUnidad;
+import dao.EmpresaDAO;
+import java.util.ArrayList;
 
 /**
  *
@@ -18,6 +21,11 @@ public class vistaUnidad extends javax.swing.JFrame {
      */
     public vistaUnidad() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
+
+        EmpresaDAO edao = new EmpresaDAO();
+        edao.listarCombo(jcboxEmpresas);
     }
 
     @SuppressWarnings("unchecked")
@@ -45,7 +53,7 @@ public class vistaUnidad extends javax.swing.JFrame {
         txtEstado = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         txtSeccion = new javax.swing.JTextField();
-        txtEmpresa = new javax.swing.JTextField();
+        jcboxEmpresas = new javax.swing.JComboBox<>();
         jPanel6 = new javax.swing.JPanel();
         btnAgregar = new javax.swing.JButton();
         btnListar = new javax.swing.JButton();
@@ -151,7 +159,7 @@ public class vistaUnidad extends javax.swing.JFrame {
                     .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(txtDepartamento, javax.swing.GroupLayout.DEFAULT_SIZE, 215, Short.MAX_VALUE)
                     .addComponent(txtEncargado, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(txtNombre, javax.swing.GroupLayout.Alignment.TRAILING)
@@ -159,7 +167,7 @@ public class vistaUnidad extends javax.swing.JFrame {
                     .addComponent(txtSubDepartamento)
                     .addComponent(txtEstado)
                     .addComponent(txtSeccion)
-                    .addComponent(txtEmpresa))
+                    .addComponent(jcboxEmpresas, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -193,10 +201,10 @@ public class vistaUnidad extends javax.swing.JFrame {
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
                     .addComponent(txtEstado, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
+                .addGap(11, 11, 11)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel8)
-                    .addComponent(txtEmpresa, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jcboxEmpresas, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -316,8 +324,10 @@ public class vistaUnidad extends javax.swing.JFrame {
     public static void main(String args[]) {
         vistaUnidad v = new vistaUnidad();
         controladorUnidad con = new controladorUnidad(v);
+//        controladorEmpresa ce = new controladorEmpresa();
         v.setVisible(true);
         v.setLocationRelativeTo(null);
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -341,9 +351,9 @@ public class vistaUnidad extends javax.swing.JFrame {
     public javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane5;
+    public javax.swing.JComboBox<String> jcboxEmpresas;
     public javax.swing.JTable tabla;
     public javax.swing.JTextField txtDepartamento;
-    public javax.swing.JTextField txtEmpresa;
     public javax.swing.JTextField txtEncargado;
     public javax.swing.JTextField txtEstado;
     public javax.swing.JTextField txtIdUnidad;

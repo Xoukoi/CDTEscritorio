@@ -10,8 +10,13 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
 import modelo.Empresa;
 import modelo.Usuario;
 import oracle.jdbc.OracleCallableStatement;
@@ -37,7 +42,6 @@ public class EmpresaDAO {
         Empresa emp = new Empresa();
 
         String sql = "select rutempresa, nombreempr, direccionemp, correoemp, rubro, estado, clave from CDT1.empresa where correoemp=" + "'" + correo + "'" + " and clave=" + "'" + clave + "'" + " and rutempresa = rutempresa";
- 
 
         int r = 0;
         try {
@@ -70,7 +74,73 @@ public class EmpresaDAO {
 
     }
 
+    //lista a un combo box
+    public void listarCombo(JComboBox cbox_empresa) {
+
+        String sql = "select rutempresa, NOMBREEMPR from CDT1.empresa";
+
+        int r = 0;
+        try {
+            con = c.getConnection();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+
+            cbox_empresa.removeAllItems();
+            while (rs.next()) {
+
+                cbox_empresa.addItem(
+                        rs.getString("rutempresa")
+                );
+                // cbox_empresa.addItem(rs.getString("rutempresa"));
+            }
+
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e);
+        } finally {
+
+            try {
+
+                con.close();
+                rs.close();
+                rs = null;
+            } catch (SQLException ex) {
+                JOptionPane.showMessageDialog(null, ex);
+            }
+        }
+
+    }
+
+
+
+    //test
+    public void listarCombox(JComboBox<Empresa> cbx) throws SQLException {
+        String sql = "select rutempresa, NOMBREEMPR from CDT1.empresa";
+        int r = 0;
+        try {
+            con = c.getConnection();
+            ps = con.prepareStatement(sql);
+            rs = ps.executeQuery();
+
+            cbx.removeAllItems();
+            while (rs.next()) {
+
+                cbx.addItem(new Empresa(
+                        rs.getString("rutempresa"),
+                        rs.getString("NOMBREEMPR")
+                ));
+            }
+
+        } catch (SQLException e) {
+
+            Logger.getLogger(Empresa.class.getName()).log(Level.SEVERE, null, e);
+        } finally {
+
+            con.close();
+            rs.close();
+        }
+    }
     //listar con procedimiento
+
     public List listarEmpresa() {
         List<Empresa> datos = new ArrayList<>();
         try {
@@ -190,5 +260,4 @@ public class EmpresaDAO {
         }
         return r;
     }
-
 }

@@ -28,6 +28,11 @@ public class Empresa {
         this.telefono = telefono;
     }
 
+    public Empresa(String rutEmpresa, String nombre ) {
+        this.rutEmpresa = rutEmpresa;
+        this.nombre = nombre;
+    }
+
     public String getRutEmpresa() {
         return rutEmpresa;
     }

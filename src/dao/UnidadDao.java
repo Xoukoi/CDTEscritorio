@@ -10,8 +10,12 @@ import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import modelo.Empresa;
 import modelo.UnidadInterna;
 import oracle.jdbc.OracleCallableStatement;
 import oracle.jdbc.OracleResultSet;
@@ -158,6 +162,33 @@ public class UnidadDao {
         } catch (Exception e) {
         }
         return r;
+    }
+    
+        public void reporte() throws SQLException {
+        String sql1 = "SELECT  COUNT(*), p.unidadinterna_idunidad, ui.nomuni\n"
+                + "FROM personal p join unidadinterna ui\n"
+                + "on(p.unidadinterna_idunidad = ui.idunidad)\n"
+                + "group by p.unidadinterna_idunidad, ui.nomuni";
+        
+        try {
+            con = c.getConnection();
+            ps = con.prepareStatement(sql1);
+            rs = ps.executeQuery();
+
+            while (rs.next()) {
+
+                rs.getInt("COUNT(*)");
+                rs.getString("nomuni");
+            }
+
+        } catch (SQLException e) {
+
+            Logger.getLogger(Empresa.class.getName()).log(Level.SEVERE, null, e);
+        } finally {
+
+            con.close();
+            rs.close();
+        }
     }
 
 }

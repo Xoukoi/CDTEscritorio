@@ -18,6 +18,8 @@ public class vistaRol extends javax.swing.JFrame {
      */
     public vistaRol() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     /**

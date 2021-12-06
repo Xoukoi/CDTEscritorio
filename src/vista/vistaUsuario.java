@@ -6,6 +6,8 @@ public class vistaUsuario extends javax.swing.JFrame {
 
     public vistaUsuario() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setResizable(false);
     }
 
     @SuppressWarnings("unchecked")
